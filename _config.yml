@@ -1,0 +1,21 @@
+# Site settings
+title: 吐槽,来自于V秘 -- 最好的视频云制作服务
+author: 多人
+# author_avatar: 
+email: zhumx@vme360.com
+description: 一个只涉及技术的blog. 
+baseurl: "" # optional
+url: "https://videome.github.io/tsukkomi"
+#twitter_username: foo_bar
+github_username: videome
+github_repo: videome/tsukkomi
+google_analytics: UA-65584551-3
+# disqus: disqus-id
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+excerpt_separator: "<!-- more -->"
+
+gems:
+  - jekyll-sitemap

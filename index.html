@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div>
+
+  	{% assign index = true %}
+
+    {% for post in site.posts %}
+		{% assign page = post %}
+		{% include post.html %}
+    {% endfor %}
+
+  <p>Power by <a href="http://jekyllrb.com/">Jekyll</a> with theme <a href="https://github.com/lauris/jekyll-lambda">lambda</a>.</p>
+
+</div>
