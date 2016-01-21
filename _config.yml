@@ -10,7 +10,7 @@ url: "https://videome.github.io/videome.github.io"
 github_username: videome
 github_repo: videome/videome.github.io
 google_analytics: UA-65584551-3
-# disqus: disqus-id
+disqus: 4383655
 
 # Build settings
 markdown: kramdown
