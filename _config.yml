@@ -3,14 +3,14 @@ title: 吐槽,来自于V秘 -- 最好的视频云制作服务
 #author: 多人
 # author_avatar: 
 email: zhumx@vme360.com
-description: 一个只涉及技术的blog. 
+description: 技术blog including git,docker,aliyun,video-making-service,oss,aws,ecs,jenkins,spring-boot,mongodb. 
 baseurl: "" # optional
 url: "https://videome.github.io/videome.github.io"
 #twitter_username: foo_bar
 github_username: videome
 github_repo: videome/videome.github.io
 google_analytics: UA-65584551-3
-disqus: 4383655
+disqus: videome-blog
 
 # Build settings
 markdown: kramdown
