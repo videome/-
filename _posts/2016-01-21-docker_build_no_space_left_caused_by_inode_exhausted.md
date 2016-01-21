@@ -2,6 +2,7 @@
 layout: post
 title: "文件系统的Inode耗尽，会导致Docker编译镜像出现'No space left on device'错误"
 category: docker troubleshoot
+author: kane
 ---
 
 最近在提交前端代码后，前端代码的自动发布老是失败。失败的原因多是编译Docker镜像时在执行`COPY`语句拷贝文件到镜像文件系统时，扔出了'No space left on device'这个错误。这个错误根据描述非常好理解，就是docker文件系统所在磁盘没有了空间。
