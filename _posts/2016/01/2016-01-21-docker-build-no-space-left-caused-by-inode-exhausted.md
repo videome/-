@@ -2,6 +2,7 @@
 layout: post
 title: "文件系统的Inode耗尽，会导致Docker编译镜像出现'No space left on device'错误"
 category: docker troubleshoot
+permalink: /docker-build-no-space-left-caused-by-inode-exhausted
 author: kane
 ---
 
