@@ -1,17 +1,30 @@
 ---
 layout: default
+title: Home
+color: "#003366"
 ---
+<!-- <div class="hero" style="background-image: url({{ site.baseurl }}/public/images/bg.jpg); background-color: {{ site.colors.CanhamPoolBlue }};"></div> -->
 
-<div>
+<div class="posts">
+{% for post in paginator.posts %}
+    {% assign page = post %}
+    {% include post.html %}
+{% endfor %}
+</div>
 
-  	{% assign index = true %}
-
-    {% for post in site.posts %}
-		{% assign page = post %}
-		{% include post.html %}
-    {% endfor %}
-
-  <p>Power by <a href="http://jekyllrb.com/">Jekyll</a> with theme <a href="https://github.com/lauris/jekyll-lambda">lambda</a>.</p>
-  <p> <a href="https://vme360.com/" target="_blank">V秘</a> | 做有爱的视频</p>
-
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
 </div>

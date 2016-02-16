@@ -1,29 +1,19 @@
-<div class="entry">
-
-	<div class="entry-content">
-
-	  <header>
-	    <h1 class="entry-title"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h1>
-	    <p class="entry-meta">
+<article class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <p>
 		    {{ page.date | date: "%b %-d, %Y" }}
 		    {% if page.category %} • 分类: {{ page.category|capitalize }}{% endif %}
-	    </p>
-	  </header>
+  </p>
+  {% if content %}
+		{{ content }}
+  {% else %}
+	  	{{ page.excerpt }}
+	  	{% if page.content contains '<!-- more -->' %}
+	  		<p><a href="{{ site.baseurl }}{{ page.url }}">阅读全文 »</a></p>
+	  	{% endif %}
+  {% endif %}
+</article>
 
-	  <article class="entry-body">
-	  	{% if content %}
-	  		{{ content }}
-  		{% else %}
-	  		{{ page.excerpt }}
-	  		{% if page.content contains '<!-- more -->' %}
-	  		<p><a href="{{ page.url | prepend: site.baseurl }}">阅读全文 »</a></p>
-	  		{% endif %}
-  		{% endif %}
-	  </article>
-
-  </div>
-
-</div>
 {% if content and page.author_footer != false %}
 
 	{% include post_footer.html %}
