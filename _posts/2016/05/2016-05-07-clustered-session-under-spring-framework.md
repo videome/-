@@ -8,6 +8,8 @@ author: kane
 
 在微服务和容器等技术的帮助下，Web应用可以较为容易的进行水平扩展，来部署更多的应用实例来提升TPS的请求处理数。当Web服务有状态的时候，如何在集群下管理用户session成为新的待解决问题。
 
+<!-- more -->
+
 [Spring Framework][spring]针对此问题衍生出了一个子项目[Spring Session][spring-session]来实现集群下的session管理。该项目提供了以下功能：
 
 - 提供API和实现管理用户session
