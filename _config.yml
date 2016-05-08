@@ -5,7 +5,7 @@ title: V秘的平凡之路 -- 最好的视频云制作服务
 email: zhumx@vme360.com
 description: 技术blog including git,docker,aliyun,video-making-service,oss,aws,ecs,jenkins,spring-boot,mongodb. 
 baseurl: "" # optional
-url: "https://videome.github.io/videome.github.io"
+url: "https://videome.github.io"
 #twitter_username: foo_bar
 github_username: videome
 github_repo: videome/videome.github.io
