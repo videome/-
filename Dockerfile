@@ -1,13 +1,12 @@
-From ruby:2.3.0
+From jekyll/jekyll:3.0
 
 RUN gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/ && \
-  gem install jekyll:3.0.2 jekyll-sitemap jekyll-paginate jekyll-gist && \
-  mkdir /srv/jekyll
-ADD / /srv/jekyll/
+  gem install jekyll-sitemap jekyll-paginate jekyll-gist 
 
-EXPOSE 4000
+ADD / /src/
+RUN chown -R jekyll:jekyll /src/
 
-WORKDIR /srv/jekyll
+WORKDIR /src
 
 ENTRYPOINT ["jekyll"]
 CMD ["serve", "-H", "0.0.0.0", "-P", "4000"]
