@@ -22,9 +22,11 @@ author: kane
 
 		docker run --hostname vme-nginx nginx:1.11
 		
-	但是[docker service create命名][docker service create]缺少等价的参数为容器指定hostname。一些依赖于**hostname**的服务将无法部署在[Docker Swarm][docker swarm mode]中，比如clustered rabbitmq。
+	但是[docker service create命令][docker service create]缺少等价的参数为容器指定hostname。一些依赖于**hostname**的服务将无法部署在[Docker Swarm][docker swarm mode]中，比如clustered rabbitmq。
 
 3. [Docker compose][docker compose]还不能与[Docker Swarm][docker swarm mode]完美集成。目前有一个experimental的[Docker Stacks and Distributed Application Bundles][docker bundle]在尝试做更好的整合。
+
+4. **docker service update**有时不能更新正在运行中的container。更多讨论见[这个issue][docker service update issue]。
 
 [vme]: https://vme360.com
 [docker]: https://www.docker.com
@@ -33,3 +35,4 @@ author: kane
 [docker service create]: https://docs.docker.com/engine/reference/commandline/service_create/
 [docker compose]: https://docs.docker.com/compose/
 [docker bundle]: https://docs.docker.com/compose/bundles/
+[docker service update issue]: https://github.com/docker/swarmkit/issues/1619
