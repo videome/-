@@ -1,7 +1,7 @@
-From ruby:2.3.0
+From ruby:2.4.0
 
 RUN gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/ && \
-  gem install jekyll:3.0.2 jekyll-sitemap jekyll-paginate jekyll-gist && \
+  gem install jekyll:3.0.5 jekyll-sitemap:0.11.0 jekyll-paginate:1.1.0 jekyll-gist:1.4.0 && \
   mkdir /srv/jekyll
 ADD / /srv/jekyll/
 
