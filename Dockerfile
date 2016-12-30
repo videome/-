@@ -1,6 +1,6 @@
 From ruby:2.3.0
 
-RUN gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/ && \
+RUN gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/ && \
   gem install jekyll:3.0.2 jekyll-sitemap jekyll-paginate jekyll-gist && \
   mkdir /srv/jekyll
 ADD / /srv/jekyll/
